@@ -19,19 +19,26 @@ class Index
 
     public function hi()
     {
-
+        $result=Db::table("my_admin_jobs")->select();
+        $rows=[];
+        foreach ($result as $item) {
+            $rows  []=$item;
+            print_r($item);
+            echo "<br/>";
+        }
 //        $result = Db::table('company')
 //            ->field(['Company_Id'=>'Id','Company_Daima'=>'Daima','Company_Name'=>'Name'])
 //            ->order('Daima')
 //            ->select();
-        $result = Cszd::field('cszd_bh,cszd_mc,cszd_arg')->select();
-        $rows = [];
-        foreach ($result->order('cszd_bh')   as $item) {
-            $rows[] = $item;
-            print_r($item->visible(['' ])->toArray());
-//            print_r($item->bh);
-            echo '<br/>';
-        }
+
+//        $result = Cszd::field('cszd_bh,cszd_mc,cszd_arg')->select();
+//        $rows = [];
+//        foreach ($result->order('cszd_bh')   as $item) {
+//            $rows[] = $item;
+//            print_r($item->visible(['' ])->toArray());
+////            print_r($item->bh);
+//            echo '<br/>';
+//        }
 
         //var_dump($result->toArray());
         //return 'hi';
