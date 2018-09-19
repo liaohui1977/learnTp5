@@ -10,3 +10,14 @@
 // +----------------------------------------------------------------------
 
 // 应用公共文件
+//$parseDsn= function ($config)
+//{
+//    //$dsn = 'sqlsrv:Database=' . $config['database'] . ';Server=' . $config['hostname'];
+//    $dsn = 'dblib:dbname=' . $config['database'] . ';host=' . $config['hostname'];
+//    if (!empty($config['hostport'])) {
+//        //$dsn .= ',' . $config['hostport'];
+//        $dsn .= ':' . $config['hostport'];
+//    }
+//    return $dsn;
+//};
+//Closure::bind($parseDsn,)\db\connector\Sqlsrv

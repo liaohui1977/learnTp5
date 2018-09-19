@@ -19,7 +19,7 @@ class Index
 
     public function hi()
     {
-        $result=Db::table("my_admin_jobs")->select();
+        $result=Db::table("my_admin_jobs")->field('id,name')->select();
         $rows=[];
         foreach ($result as $item) {
             $rows  []=$item;
